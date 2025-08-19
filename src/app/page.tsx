@@ -1,5 +1,6 @@
 import OurApporach from "@/components/Apporach/OurApporach";
 import { BorderGradientButton } from "@/components/button/BorderGradientButton";
+import { Experience } from "@/components/ExpericenceWork/Experience";
 import { HeroSection } from "@/components/heroSection/hero-section-dark";
 import { GlowingEffectDemo } from "@/components/keyPoints/KeyPoint";
 
@@ -34,10 +35,16 @@ export default function Home() {
       </section>
       <section className="container my-10">
         <OurApporach />
+      </section>
+      <section className="container my-10">
+        <div>Our Methodology Unveiled</div>
         <BorderGradientButton
           ctaText="Book Your Free Consultation"
           ctaHref="#"
         />
+      </section>
+      <section className="">
+        <Experience />
       </section>
     </main>
   );
