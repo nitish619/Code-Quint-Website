@@ -75,12 +75,12 @@ function Header() {
 
       {/* Mobile Menu - toggle show/hide */}
       {menuOpen && (
-        <nav className="lg:hidden bg-gray-100 w-full px-4 py-6 shadow-lg absolute top-20 left-0 z-10">
-          <ul className="flex flex-col gap-4 text-center">
+        <nav className="lg:hidden bg-primary-foreground w-full px-4 py-6 shadow-lg absolute top-20 left-0 z-10">
+          <ul className="flex flex-col gap-4 text-center text-foreground">
             <li>
               <Link
                 href="/services"
-                className="block text-gray-900 hover:text-blue-600 font-medium"
+                className="block hover:text-blue-600 font-medium"
                 onClick={() => setMenuOpen(false)}
               >
                 Services
@@ -89,7 +89,7 @@ function Header() {
             <li>
               <Link
                 href="/about"
-                className="block text-gray-900 hover:text-blue-600 font-medium"
+                className="block hover:text-blue-600 font-medium"
                 onClick={() => setMenuOpen(false)}
               >
                 About
@@ -98,7 +98,7 @@ function Header() {
             <li>
               <Link
                 href="/contact"
-                className="block text-gray-900 hover:text-blue-600 font-medium"
+                className="block hover:text-blue-600 font-medium"
                 onClick={() => setMenuOpen(false)}
               >
                 Contact

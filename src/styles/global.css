@@ -27,3 +27,29 @@
     padding: 0px 150px;
   }
 }
+
+
+.head-h2 {
+  font-size: small;
+}
+
+@media (min-width: 640px) {
+  /* sm */
+  .head-h2 {
+  font-size: small;
+  }
+}
+
+@media (min-width: 768px) {
+  /* md */
+  .head-h2 {
+  font-size: small;
+  }
+}
+
+@media (min-width: 1024px) {
+  /* lg */
+  .head-h2 {
+  font-size: xx-large;
+  }
+}
