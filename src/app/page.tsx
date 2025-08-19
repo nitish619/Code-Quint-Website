@@ -7,10 +7,13 @@ import { HeroSection } from "@/components/heroSection/hero-section-dark";
 import { GlowingEffectDemo } from "@/components/keyPoints/KeyPoint";
 import { Trust } from "@/components/TrustedBy/Trust";
 import { Contact2 } from "@/components/Contact/contact-2";
+import OurGoal from "@/components/Goals/OurGoal";
+import { TestimonialDemo } from "@/components/Testimonials/TestimonialDemo";
 
 export default function Home() {
   return (
     <main>
+      {/* Hero Section */}
       <section>
         <HeroSection
           title="Welcome to Our Platform"
@@ -34,12 +37,15 @@ export default function Home() {
           }}
         />
       </section>
+
       <section className="container my-10">
         <GlowingEffectDemo />
       </section>
+
       <section className="container my-10">
         <OurApporach />
       </section>
+
       <section className="container my-10">
         <div>Our Methodology Unveiled</div>
         <BorderGradientButton
@@ -47,27 +53,33 @@ export default function Home() {
           ctaHref="#"
         />
       </section>
+
       <section className="">
         <Experience />
       </section>
+
       <section className="container my-10">
         <FeaturesSectionWithHoverEffects />
       </section>
-      <section className="container my-10">testimonial</section>
+
+      <section className="container my-10">
+        <TestimonialDemo />
+      </section>
+
       <section className="container my-10">
         <Trust />
       </section>
+
       <section className="container my-10">About CodeQuint</section>
-      <section className="container my-10">
-        goals
-        <BorderGradientButton
-          ctaText="Book Your Free Consultation"
-          ctaHref="#"
-        />
+
+      <section>
+        <OurGoal />
       </section>
-      <section className="container my-10">
+
+      <section className="container">
         <FAQDemo />
       </section>
+
       <section className="container my-10">
         <Contact2
           title="Contact Us"

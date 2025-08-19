@@ -45,7 +45,7 @@ export function FeaturesSectionWithHoverEffects() {
           <Feature key={feature.title} {...feature} index={index} />
         ))}
       </div>
-      <div className="bg-purple-600 text-white p-6 rounded-lg mx-auto shadow-lg">
+      <div className="bg-purple-400/20 text-primary p-6 rounded-lg mx-auto shadow-lg">
         <h2 className="head-h2 mb-2">Unleash the Fire 🔥</h2>
         <p>
           I’m here to ensure your project stands out—bold, blazing, and
