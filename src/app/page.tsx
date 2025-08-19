@@ -2,7 +2,6 @@ import OurApporach from "@/components/Apporach/OurApporach";
 import { BorderGradientButton } from "@/components/button/BorderGradientButton";
 import { Experience } from "@/components/ExpericenceWork/Experience";
 import FAQDemo from "@/components/FAQs/faq";
-import { FeaturesSectionWithHoverEffects } from "@/components/WhyChooseUs/feature-section-with-hover-effects";
 import { HeroSection } from "@/components/heroSection/hero-section-dark";
 import { GlowingEffectDemo } from "@/components/keyPoints/KeyPoint";
 import { Trust } from "@/components/TrustedBy/Trust";
@@ -10,6 +9,7 @@ import { Contact2 } from "@/components/Contact/contact-2";
 import OurGoal from "@/components/Goals/OurGoal";
 import { TestimonialDemo } from "@/components/Testimonials/TestimonialDemo";
 import WhyChooseUs from "@/components/WhyChooseUs/WhyChooseUs";
+import OurServices from "@/components/Our services/Ourservices";
 
 export default function Home() {
   return (
@@ -53,6 +53,7 @@ export default function Home() {
 
       <section className="" id="services">
         <Experience />
+        <OurServices />
       </section>
 
       <section className="container my-10">

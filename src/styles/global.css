@@ -30,27 +30,27 @@
 
 
 .head-h2 {
-  font-size: small;
+  font-size: 40px;
 }
 
 @media (min-width: 640px) {
   /* sm */
   .head-h2 {
-  font-size: small;
+  font-size: 50px;
   }
 }
 
 @media (min-width: 768px) {
   /* md */
   .head-h2 {
-  font-size: small;
+  font-size: 60px;
   }
 }
 
 @media (min-width: 1024px) {
   /* lg */
   .head-h2 {
-  font-size: xx-large;
+  font-size: 80px;
   }
 }
 

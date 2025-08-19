@@ -1,6 +1,7 @@
 "use client";
 
 import AutoScroll from "embla-carousel-auto-scroll";
+import { styles } from "@/utils/style";
 
 import {
   Carousel,
@@ -77,7 +78,7 @@ const Logos3 = ({
   return (
     <section className="py-10">
       <div className="container flex flex-col items-center text-center">
-        <h1 className="my-6 text-2xl font-bold text-pretty lg:text-4xl">
+        <h1 className={`${styles.sectionHeadText} text-left md:text-center`}>
           {heading}
         </h1>
       </div>

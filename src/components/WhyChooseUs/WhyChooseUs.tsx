@@ -31,7 +31,7 @@ function WhyChooseUs() {
         <h2 className="head-h2">
           Why Choose <span className="text-purple-600">Our Team</span>
         </h2>
-        <p>
+        <p className="text-left md:text-center">
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto
           aliquam impedit non vel vero dolorem.
         </p>

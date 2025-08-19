@@ -25,9 +25,9 @@ export const Contact2 = ({
       <div className="mx-auto flex max-w-screen-xl flex-col justify-between gap-10 lg:flex-row lg:gap-20">
         <div className="mx-auto flex max-w-sm flex-col justify-between gap-10">
           <div className="text-center lg:text-left">
-            <h1 className="mb-2 text-5xl font-semibold lg:mb-1 lg:text-6xl">
+            <h2 className="head-h2">
               {title}
-            </h1>
+            </h2>
             <p className="text-muted-foreground">{description}</p>
           </div>
           <div className="mx-auto w-fit lg:mx-0">
