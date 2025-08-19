@@ -23,7 +23,7 @@ export default function Home() {
           }}
           description="From SEO optimization to social media management, we have the tools to boost your online presence and drive growth."
           ctaText="Get Started"
-          ctaHref="/signup"
+          ctaHref="#contact"
           bottomImage={{
             light: "https://www.launchuicomponents.com/app-light.png",
             dark: "https://www.launchuicomponents.com/app-dark.png",
@@ -54,7 +54,7 @@ export default function Home() {
         />
       </section>
 
-      <section className="">
+      <section className="" id="services">
         <Experience />
       </section>
 
@@ -70,7 +70,7 @@ export default function Home() {
         <Trust />
       </section>
 
-      <section className="container my-10">About CodeQuint</section>
+      <section className="container my-10" id="about">About CodeQuint</section>
 
       <section>
         <OurGoal />
@@ -80,7 +80,7 @@ export default function Home() {
         <FAQDemo />
       </section>
 
-      <section className="container my-10">
+      <section className="container my-10" id="contact">
         <Contact2
           title="Contact Us"
           description="We are available for questions, feedback, or collaboration opportunities. Let us know how we can help!"
