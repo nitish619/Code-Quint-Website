@@ -9,6 +9,7 @@ import { Trust } from "@/components/TrustedBy/Trust";
 import { Contact2 } from "@/components/Contact/contact-2";
 import OurGoal from "@/components/Goals/OurGoal";
 import { TestimonialDemo } from "@/components/Testimonials/TestimonialDemo";
+import WhyChooseUs from "@/components/WhyChooseUs/WhyChooseUs";
 
 export default function Home() {
   return (
@@ -24,10 +25,6 @@ export default function Home() {
           description="From SEO optimization to social media management, we have the tools to boost your online presence and drive growth."
           ctaText="Get Started"
           ctaHref="#contact"
-          bottomImage={{
-            light: "https://www.launchuicomponents.com/app-light.png",
-            dark: "https://www.launchuicomponents.com/app-dark.png",
-          }}
           gridOptions={{
             angle: 65,
             opacity: 0.4,
@@ -59,7 +56,8 @@ export default function Home() {
       </section>
 
       <section className="container my-10">
-        <FeaturesSectionWithHoverEffects />
+        {/* <FeaturesSectionWithHoverEffects /> */}
+        <WhyChooseUs />
       </section>
 
       <section className="container my-10">
@@ -70,7 +68,9 @@ export default function Home() {
         <Trust />
       </section>
 
-      <section className="container my-10" id="about">About CodeQuint</section>
+      <section className="container my-10" id="about">
+        About CodeQuint
+      </section>
 
       <section>
         <OurGoal />

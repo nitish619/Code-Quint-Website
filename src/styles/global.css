@@ -64,3 +64,12 @@
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
 }
+
+/* Box gradient  */
+.bg-gradient-light {
+  background: linear-gradient(to bottom, #9a7ec7 10%, #ffffff 65%);
+}
+
+.dark .bg-gradient-dark {
+  background: linear-gradient(to bottom, #1e1e1e 10%, #000000 85%);
+}
