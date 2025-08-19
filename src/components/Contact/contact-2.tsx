@@ -23,7 +23,7 @@ export const Contact2 = ({
   return (
     <section className="py-20">
       <div className="mx-auto flex max-w-screen-xl flex-col justify-between gap-10 lg:flex-row lg:gap-20">
-        <div className="mx-auto flex max-w-sm flex-col justify-between gap-10">
+        <div className="mx-auto flex max-w-lg flex-col justify-between gap-10">
           <div className="text-center lg:text-left">
             <h2 className="head-h2">
               {title}

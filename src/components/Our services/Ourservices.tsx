@@ -51,7 +51,13 @@ const OurServices = () => {
                 <div className="absolute md:left-1/2 -left-10 flex items-center justify-center w-16 h-16 rounded-full bg-gray-700 border-4 border-white shadow-lg z-10 transform md:-translate-x-1/2">
                   <div className="rounded-full">{exp.logo}</div>
                 </div>
-                <div className="w-full md:w-5/12 lg:w-5/12 bg-gray-200 dark:bg-gray-800 p-6 mt-6 md:mt-0 ml-10 md:ml-0 md:mr-6 rounded-lg shadow-lg border-b-4 text-primary">
+                <div
+                  className="w-full md:w-5/12 lg:w-5/12 p-6 mt-6 md:mt-0 ml-10 md:ml-0 md:mr-6 rounded-lg shadow-lg border-b-4 text-primary"
+                  style={{
+                    background:
+                      "linear-gradient(to bottom, #3a1573 10%, #000000 65%)",
+                  }}
+                >
                   <h3 className="text-lg md:text-xl font-semibold">
                     {exp.title}
                   </h3>

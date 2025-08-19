@@ -65,9 +65,9 @@ export default function Home() {
         <TestimonialDemo />
       </section>
 
-      <section className="container my-10">
+      {/* <section className="container my-10">
         <Trust />
-      </section>
+      </section> */}
 
       <section className="container my-10" id="about">
         About CodeQuint
