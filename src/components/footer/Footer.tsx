@@ -1,14 +1,14 @@
 import React from "react";
-import { FaFacebookSquare, FaLinkedin, FaYoutubeSquare } from "react-icons/fa";
+import { FaFacebookSquare, FaLinkedin, FaYoutube } from "react-icons/fa";
 
 function Footer() {
   return (
     <footer>
-      <section className="h-auto bg-gray-100 py-10 relative overflow-hidden">
+      <section className="h-auto bg-gray-900 py-10 relative overflow-hidden">
         {/* Background Text */}
         <div className="absolute inset-0 flex justify-center items-end pointer-events-none py-5">
           <span
-            className="text-gray-300 text-[10rem] font-extrabold select-none"
+            className="text-gray-800 text-[10rem] font-extrabold select-none"
             style={{ lineHeight: 1, userSelect: "none" }}
             aria-hidden="true"
           >
@@ -20,8 +20,8 @@ function Footer() {
         <div className="relative container mx-auto px-4">
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
             <div>
-              <h3 className="mb-4 font-semibold text-gray-900">Services</h3>
-              <ul className="space-y-2 text-gray-700">
+              <h3 className="mb-4 font-semibold text-white">Services</h3>
+              <ul className="space-y-2 text-white">
                 <li>
                   <a
                     href="https://www.codequint.com/seo-service/"
@@ -50,8 +50,8 @@ function Footer() {
             </div>
 
             <div>
-              <h3 className="mb-4 font-semibold text-gray-900">About</h3>
-              <ul className="space-y-2 text-gray-700">
+              <h3 className="mb-4 font-semibold text-white">About</h3>
+              <ul className="space-y-2 text-white">
                 <li>
                   <a
                     href="https://www.codequint.com/work/"
@@ -80,10 +80,10 @@ function Footer() {
             </div>
 
             <div>
-              <h3 className="mb-4 font-semibold text-gray-900">
+              <h3 className="mb-4 font-semibold text-white">
                 Policies & Support
               </h3>
-              <ul className="space-y-2 text-gray-700">
+              <ul className="space-y-2 text-white">
                 <li>
                   <a
                     href="https://www.codequint.com/disclaimer/"
@@ -128,8 +128,8 @@ function Footer() {
             </div>
 
             <div>
-              <h3 className="mb-4 font-semibold text-gray-900">Get in touch</h3>
-              <ul className="space-y-2 text-gray-700">
+              <h3 className="mb-4 font-semibold text-white">Get in touch</h3>
+              <ul className="space-y-2 text-white">
                 <li>
                   <a
                     href="https://www.codequint.com/contact/"
@@ -152,51 +152,54 @@ function Footer() {
                 <a
                   href="https://www.codequint.com/#"
                   aria-label="Facebook"
-                  className="hover:text-blue-600"
+                  className="hover:text-blue-600 text-white"
                 >
                   <FaFacebookSquare />
                 </a>
                 <a
                   href="https://www.codequint.com/#"
                   aria-label="Linkedin"
-                  className="hover:text-blue-600"
+                  className="hover:text-blue-600 text-white"
                 >
                   <FaLinkedin />
                 </a>
                 <a
                   href="https://www.codequint.com/#"
                   aria-label="YouTube"
-                  className="hover:text-blue-600"
+                  className="hover:text-red-600 text-white"
                 >
-                  <FaYoutubeSquare />
+                  <FaYoutube />
                 </a>
               </div>
             </div>
           </div>
         </div>
       </section>
-      <section className="container mx-auto">
-        <div className="text-center space-y-2 py-6 text-sm">
-          <p className="text-[14px]">
-            Copyright © 2024 CodeQuint. All rights reserved.
-          </p>
-          <p className="text-[10px]">
-            This site is protected by reCAPTCHA and the Google{" "}
-            <a
-              href="https://policies.google.com/privacy"
-              className="text-blue-600 hover:text-red-600"
-            >
-              Privacy Policy
-            </a>{" "}
-            and{" "}
-            <a
-              href="https://policies.google.com/privacy"
-              className="text-blue-600 hover:text-red-600"
-            >
-              Terms of Service
-            </a>{" "}
-            apply.
-          </p>
+      <section className="bg-gray-900">
+        <div className="border border-gray-600 w-[75%] mx-auto"></div>
+        <div className="container mx-auto">
+          <div className="text-center space-y-2 py-6 text-sm">
+            <p className="text-[14px]">
+              Copyright © 2024 CodeQuint. All rights reserved.
+            </p>
+            <p className="text-[10px]">
+              This site is protected by reCAPTCHA and the Google{" "}
+              <a
+                href="https://policies.google.com/privacy"
+                className="text-blue-600 hover:text-red-600"
+              >
+                Privacy Policy
+              </a>{" "}
+              and{" "}
+              <a
+                href="https://policies.google.com/privacy"
+                className="text-blue-600 hover:text-red-600"
+              >
+                Terms of Service
+              </a>{" "}
+              apply.
+            </p>
+          </div>
         </div>
       </section>
     </footer>
