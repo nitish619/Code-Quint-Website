@@ -3,14 +3,12 @@ import { BorderGradientButton } from "@/components/button/BorderGradientButton";
 import { Experience } from "@/components/ExpericenceWork/Experience";
 import FAQDemo from "@/components/FAQs/faq";
 import { HeroSection } from "@/components/heroSection/hero-section-dark";
-import { GlowingEffectDemo } from "@/components/keyPoints/KeyPoint";
 import { Trust } from "@/components/TrustedBy/Trust";
 import { Contact2 } from "@/components/Contact/contact-2";
 import OurGoal from "@/components/Goals/OurGoal";
 import { TestimonialDemo } from "@/components/Testimonials/TestimonialDemo";
 import WhyChooseUs from "@/components/WhyChooseUs/WhyChooseUs";
 import { Pricing } from "@/components/Price/pricing-section-with-comparison";
-import { HeroSection1 } from "@/components/heroSection/hero-section-1";
 import GlowCardGrid from "@/components/keyPoints/GlowCardGrid";
 
 export default function Home() {
@@ -18,7 +16,7 @@ export default function Home() {
     <main>
       {/* Hero Section */}
       <section>
-        <HeroSection1 />
+        <HeroSection />
       </section>
 
       <section className="container-prose section">
