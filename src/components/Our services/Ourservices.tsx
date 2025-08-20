@@ -1,10 +1,8 @@
 import React from "react";
 import { styles } from "@/utils/style";
-import { FaCode, FaPencilRuler } from "react-icons/fa";
 
 const experiences = [
   {
-    logo: <FaCode size={30} className="text-white" />,
     title: "Web Developer",
     description: [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum molestias fugit eligendi voluptas? Similique, cum?",
@@ -13,7 +11,6 @@ const experiences = [
     ],
   },
   {
-    logo: <FaPencilRuler size={30} className="text-white" />,
     title: "UI/UX Designer",
     description: [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum molestias fugit eligendi voluptas? Similique, cum?",
@@ -21,7 +18,17 @@ const experiences = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum molestias fugit eligendi voluptas? Similique, cum?",
     ],
   },
+  {
+    title: "SEO",
+    description: [
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum molestias fugit eligendi voluptas? Similique, cum?",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum molestias fugit eligendi voluptas? Similique, cum?",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum molestias fugit eligendi voluptas? Similique, cum?",
+    ],
+  },
+  // ...more if needed
 ];
+
 
 const OurServices = () => {
   return (
@@ -31,14 +38,12 @@ const OurServices = () => {
           <p className={`${styles.sectionSubText} text-left md:text-center`}>
             What I have done so far
           </p>
-          <h2 className={`${styles.sectionHeadText} text-left md:text-center`}>
-            Our Services
-          </h2>
+          <h2 className="head-h2 text-center">Our Apporach</h2>
         </div>
 
         <div className="relative max-w-6xl mx-auto">
           {/* Vertical Line */}
-          <div className="absolute w-1 h-full bg-primary md:left-1/2 left-4 transform md:-translate-x-1/2"></div>
+          <div className="absolute w-1 h-full bg-primary md:left-1/2 left-7 transform md:-translate-x-1/2"></div>
 
           <div className="space-y-12">
             {experiences.map((exp, index) => (
@@ -48,11 +53,13 @@ const OurServices = () => {
                   index % 2 === 0 ? "md:flex-row-reverse" : "md:flex-row"
                 }`}
               >
-                <div className="absolute md:left-1/2 -left-10 flex items-center justify-center w-16 h-16 rounded-full bg-gray-700 border-4 border-white shadow-lg z-10 transform md:-translate-x-1/2">
-                  <div className="rounded-full">{exp.logo}</div>
+                <div className="absolute md:left-1/2 -left-7 flex items-center justify-center w-16 h-16 rounded-full bg-gray-700 border-4 border-white shadow-lg z-10 transform md:-translate-x-1/2">
+                  <div className="rounded-full text-2xl md:text-3xl font-bold text-white flex items-center justify-center w-full h-full">
+                    {index + 1}
+                  </div>
                 </div>
                 <div
-                  className="w-full md:w-5/12 lg:w-5/12 p-6 mt-6 md:mt-0 ml-10 md:ml-0 md:mr-6 rounded-lg shadow-lg border-b-4 text-primary"
+                  className="w-[90%] md:w-5/12 lg:w-5/12 p-6 mt-6 md:mt-0 ml-5 md:ml-0 md:mr-6 rounded-lg shadow-lg border-b-4 text-primary"
                   style={{
                     background:
                       "linear-gradient(to bottom, #3a1573 10%, #000000 65%)",

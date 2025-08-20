@@ -1,31 +1,93 @@
 import React from "react";
+import { styles } from "@/utils/style";
 
-function OurApproach() {
+const approachData = [
+  {
+    title: "Web Developer",
+    description: [
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum molestias fugit eligendi voluptas? Similique, cum?",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum molestias fugit eligendi voluptas? Similique, cum?",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum molestias fugit eligendi voluptas? Similique, cum?",
+    ],
+  },
+  {
+    title: "UI/UX Designer",
+    description: [
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum molestias fugit eligendi voluptas? Similique, cum?",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum molestias fugit eligendi voluptas? Similique, cum?",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum molestias fugit eligendi voluptas? Similique, cum?",
+    ],
+  },
+  {
+    title: "SEO",
+    description: [
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum molestias fugit eligendi voluptas? Similique, cum?",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum molestias fugit eligendi voluptas? Similique, cum?",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum molestias fugit eligendi voluptas? Similique, cum?",
+    ],
+  },
+  // ...more if needed
+];
+
+const OurApproach = () => {
   return (
-    <section className="max-w-4xl mx-auto px-4 py-12 text-center">
-      <h2 className="head-h2">
-        Our <span className="text-purple-600">Unique</span> Approach
-      </h2>
-      <p className="mb-4 text-primary">
-        Forget about simply throwing ads out there and crossing your fingers.
-        That’s the common pitfall many businesses stumble into.
-      </p>
-      <p className="mb-4 text-primary">
-        We kick things off with strategic planning, delving deep into
-        understanding your business and the products/services you offer.
-      </p>
-      <p className="mb-4 text-primary">
-        Once we’ve wrapped our heads around your operations, it’s brainstorming
-        time. We generate innovative marketing campaign ideas tailored to your
-        brand.
-      </p>
-      <p className="text-primary">
-        Next comes content creation, crafting the perfect ad strategy or organic
-        SEO plan, culminating in the unveiling of your brand’s powerful
-        marketing messages to the world.
-      </p>
+    <section id="experience" className="mx-auto">
+      <div className="">
+        <div className="m-4">
+          {/* <p className={`${styles.sectionSubText} text-left md:text-center`}>
+            What I have done so far
+          </p> */}
+          <h2 className="head-h2 text-center">Our Apporach</h2>
+        </div>
+
+        <div className="relative max-w-6xl mx-auto">
+          {/* Vertical Line */}
+          <div className="absolute w-1 h-full bg-primary md:left-1/2 left-7 transform md:-translate-x-1/2"></div>
+
+          <div className="space-y-12">
+            {approachData.map((exp, index) => (
+              <div
+                key={index}
+                className={`relative flex items-center flex-col ml-6 pl-6 md:ml-0 md:items-start ${
+                  index % 2 === 0 ? "md:flex-row-reverse" : "md:flex-row"
+                }`}
+              >
+                <div className="absolute md:left-1/2 -left-7 flex items-center justify-center w-16 h-16 rounded-full bg-gray-700 border-4 border-white shadow-lg z-10 transform md:-translate-x-1/2">
+                  <div className="rounded-full text-2xl md:text-3xl font-bold text-white flex items-center justify-center w-full h-full">
+                    {index + 1}
+                  </div>
+                </div>
+                <div
+                  className="w-[90%] md:w-5/12 lg:w-5/12 p-6 mt-6 md:mt-0 ml-5 md:ml-0 md:mr-6 rounded-lg shadow-lg border-b-4 text-white"
+                  style={{
+                    background:
+                      "linear-gradient(to bottom, #31283d 10%, #000000 65%)",
+                  }}
+                >
+                  <h3 className="text-lg md:text-xl font-semibold">
+                    {exp.title}
+                  </h3>
+                  <ul className="mt-1 md:mt-5 list-disc ml-5 space-y-2">
+                    {(Array.isArray(exp.description)
+                      ? exp.description
+                      : [exp.description]
+                    ).map((points, index) => (
+                      <li
+                        key={index}
+                        className="text-white-100 text-[12px] md:text-[14px] pl-1 tracking-wider"
+                      >
+                        {points}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
     </section>
   );
-}
+};
 
 export default OurApproach;

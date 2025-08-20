@@ -3,12 +3,12 @@ import { BorderGradientButton } from "../button/BorderGradientButton";
 
 function OurGoal() {
   return (
-    <div className="bg-purple-400/20 min-h-9/12">
+    <div className="bg-gray-600/20 min-h-9/12">
       <div className="container">
         <div className="flex flex-col justify-center space-y-8 py-12">
           <div className="space-y-6 text-primary">
             <p className="text-xl">Clear Goals, Uncertain Paths.</p>
-            <h2 className="head-h2 text-6xl md:text-9xl font-bold">
+            <h2 className="head-h2">
               Captivate. Impress. Convert.
             </h2>
             <p className="text-xl">

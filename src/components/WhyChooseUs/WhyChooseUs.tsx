@@ -43,7 +43,7 @@ function WhyChooseUs() {
             className="border border-transparent p-6 rounded-lg text-white transform transition duration-300 ease-in-out hover:border-white hover:scale-105 flex flex-col"
             style={{
               background:
-                "linear-gradient(to bottom, #3a1573 10%, #000000 65%)",
+                "linear-gradient(to bottom, #31283d 10%, #000000 65%)",
             }}
           >
             <div className="mb-4">{item.icon}</div>

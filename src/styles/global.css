@@ -1,57 +1,10 @@
 /* global.css */
+@import "tailwindcss"; /* Includes theme vars, Preflight, and utilities */
 
 .container {
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 0px 10px;
-}
-
-@media (min-width: 640px) {
-  /* sm */
-  .container {
-    padding: 0px 50px;
-  }
-}
-
-@media (min-width: 768px) {
-  /* md */
-  .container {
-    padding: 0px 50px;
-  }
-}
-
-@media (min-width: 1024px) {
-  /* lg */
-  .container {
-    padding: 0px 150px;
-  }
-}
-
-
-.head-h2 {
-  font-size: 40px;
-}
-
-@media (min-width: 640px) {
-  /* sm */
-  .head-h2 {
-  font-size: 50px;
-  }
-}
-
-@media (min-width: 768px) {
-  /* md */
-  .head-h2 {
-  font-size: 60px;
-  }
-}
-
-@media (min-width: 1024px) {
-  /* lg */
-  .head-h2 {
-  font-size: 80px;
-  }
+  max-width: var(--container-max);
+  margin-inline: auto;
+  padding-inline: var(--container-pad);
 }
 
 /* Hide scrollbar for Chrome, Safari and Opera */
@@ -61,8 +14,8 @@
 
 /* Hide scrollbar for IE, Edge and Firefox */
 .hide-scrollbar {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }
 
 /* Box gradient  */
@@ -72,4 +25,150 @@
 
 .dark .bg-gradient-dark {
   background: linear-gradient(to bottom, #1e1e1e 10%, #000000 85%);
+}
+
+/* -------------------------------------------------------
+   1) PolySans font faces (adjust file paths as needed)
+   ------------------------------------------------------- */
+@font-face {
+  font-family: "PolySans";
+  src: url("/fonts/PolySans-Variable.woff2") format("woff2-variations"),
+    url("/fonts/PolySans-Variable.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "PolySans";
+  src: url("/fonts/PolySans-Italic.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* -------------------------------------------------------
+   2) Root design tokens (fluid type, spacing, colors)
+   - Viewport range assumed ~360px → 1440px
+   ------------------------------------------------------- */
+@layer base {
+  :root {
+    /* Fonts */
+    --font-sans: "PolySans", ui-sans-serif, system-ui, -apple-system, "Segoe UI",
+      Roboto, "Noto Sans", "Helvetica Neue", Arial, "Apple Color Emoji",
+      "Segoe UI Emoji";
+
+    /* Layout */
+    --container-max: 1200px;
+    --container-pad: clamp(1rem, 3vw, 2rem); /* 16 → 32px */
+    --gutter: clamp(1rem, 2.5vw, 2rem); /* 16 → 32px */
+    --section-gap: clamp(3rem, 6vw, 6rem); /* 48 → 96px */
+
+    /* Line heights */
+    --lh-tight: 1.15;
+    --lh-normal: 1.5;
+    --lh-relaxed: 1.65;
+
+    /* Type scale (min → max) */
+    /* Small/meta        14 → 16px  */
+    --fs-small: clamp(0.875rem, 0.83rem + 0.35vw, 1rem);
+    /* Body              16 → 18px  */
+    --fs-body: clamp(1rem, 0.96rem + 0.4vw, 1.125rem);
+    /* Lead/intro        18 → 22px  */
+    --fs-lead: clamp(1.125rem, 1.02rem + 0.75vw, 1.375rem);
+    /* H3                24 → 24px  */
+    --fs-h3: clamp(1.5rem, 1.5rem + 0vw, 1.5rem);
+    /* H2                36 → 58px  */
+    --fs-h2: clamp(2.125rem, 1.625rem + 2.2222vw, 3.625rem);
+    /* H1                34 → 48px  */
+    --fs-h1: clamp(2.125rem, 1.5rem + 2.5vw, 3rem);
+    /* Display/hero      40 → 64px  */
+    --fs-display: clamp(2.5rem, 1.6667rem + 3.7037vw, 5rem);
+
+    /* Optional step aliases (for existing codebases) */
+    --step-00: var(--fs-small);
+    --step-0: var(--fs-body);
+    --step-1: var(--fs-h3);
+    --step-2: var(--fs-h2);
+    --step-3: var(--fs-h1);
+    --step-4: var(--fs-display);
+
+    /* Elevation */
+    --elev-1: 0 1px 2px hsl(0 0% 0% / 0.06), 0 1px 1px hsl(0 0% 0% / 0.04);
+    --elev-2: 0 10px 25px hsl(0 0% 0% / 0.08), 0 4px 10px hsl(0 0% 0% / 0.06);
+
+    /* Colors (light) — align with shadcn-style tokens */
+  }
+
+  /* Dark theme (auto) */
+
+  /* -------------------------------------------------------
+     3) Base element defaults
+     ------------------------------------------------------- */
+  html {
+    font-family: var(--font-sans);
+    -webkit-text-size-adjust: 100%;
+    text-rendering: optimizeLegibility;
+  }
+  body {
+    color: hsl(var(--fg));
+    background-color: hsl(var(--bg));
+    font-size: var(--fs-body);
+    line-height: var(--lh-normal);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    line-height: var(--lh-tight);
+    letter-spacing: 0;
+  }
+  h1 {
+    font-size: var(--fs-h1);
+  }
+  h2 {
+    font-size: var(--fs-h2);
+  }
+  h3 {
+    font-size: var(--fs-h3);
+  }
+
+  p + p {
+    margin-top: 1rem;
+  } /* 16px default */
+  p.lead {
+    font-size: var(--fs-lead);
+    line-height: var(--lh-relaxed);
+  }
+
+  /* Forms & focus */
+  :focus-visible {
+    outline: 2px solid hsl(var(--primary));
+    outline-offset: 2px;
+  }
+}
+
+/* -------------------------------------------------------
+   4) Helpful Tailwind-friendly utilities (optional)
+   Use arbitrary values or these short-hands in class names
+   ------------------------------------------------------- */
+@layer utilities {
+  .container-prose {
+    max-width: var(--container-max);
+    margin-inline: auto;
+    padding-inline: var(--container-pad);
+  }
+  .section {
+    padding-block: var(--section-gap);
+  }
+  .gutter {
+    gap: var(--gutter);
+  }
+  .card {
+    background: hsl(var(--card));
+    border: 1px solid hsl(var(--border));
+    border-radius: 1rem;
+    box-shadow: var(--elev-1);
+    padding: 1.5rem; /* 24px */
+  }
 }

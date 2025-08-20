@@ -8,6 +8,7 @@ import {
   CarouselContent,
   CarouselItem,
 } from "@/components/ui/carousel";
+import Image from "next/image";
 
 interface Logo {
   id: string;
@@ -82,8 +83,8 @@ const Logos3 = ({
           {heading}
         </h1>
       </div>
-      <div className="pt-10 md:pt-16 lg:pt-20">
-        <div className="relative mx-auto flex items-center justify-center lg:max-w-5xl">
+      <div className="pt-10 md:pt-16 lg:pt-20 overflow-hidden">
+        <div className="relative mx-auto flex items-center justify-center max-w-full lg:max-w-5xl">
           <Carousel
             opts={{ loop: true }}
             plugins={[AutoScroll({ playOnInit: true })]}
@@ -96,8 +97,10 @@ const Logos3 = ({
                 >
                   <div className="mx-10 flex shrink-0 items-center justify-center">
                     <div>
-                      <img
+                      <Image
                         src={logo.image}
+                        width={100}
+                        height={100}
                         alt={logo.description}
                         className={logo.className}
                       />

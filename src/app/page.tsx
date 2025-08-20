@@ -9,7 +9,6 @@ import { Contact2 } from "@/components/Contact/contact-2";
 import OurGoal from "@/components/Goals/OurGoal";
 import { TestimonialDemo } from "@/components/Testimonials/TestimonialDemo";
 import WhyChooseUs from "@/components/WhyChooseUs/WhyChooseUs";
-import OurServices from "@/components/Our services/Ourservices";
 
 export default function Home() {
   return (
@@ -35,15 +34,15 @@ export default function Home() {
         />
       </section>
 
-      <section className="container my-10">
+      <section className="container-prose section">
         <GlowingEffectDemo />
       </section>
 
-      <section className="container my-10">
+      <section className="container-prose section">
         <OurApporach />
       </section>
 
-      <section className="container my-10">
+      <section className="container-prose section">
         <div>Our Methodology Unveiled</div>
         <BorderGradientButton
           ctaText="Book Your Free Consultation"
@@ -53,23 +52,21 @@ export default function Home() {
 
       <section className="" id="services">
         <Experience />
-        <OurServices />
       </section>
 
-      <section className="container my-10">
-        {/* <FeaturesSectionWithHoverEffects /> */}
+      <section className="container-prose section">
         <WhyChooseUs />
       </section>
 
-      <section className="container my-10">
+      <section className="container-prose section">
         <TestimonialDemo />
       </section>
 
-      {/* <section className="container my-10">
+      <section className="container-prose section">
         <Trust />
-      </section> */}
+      </section>
 
-      <section className="container my-10" id="about">
+      <section className="container-prose section" id="about">
         About CodeQuint
       </section>
 
@@ -77,11 +74,11 @@ export default function Home() {
         <OurGoal />
       </section>
 
-      <section className="container">
+      <section className="">
         <FAQDemo />
       </section>
 
-      <section className="container my-10" id="contact">
+      <section className="container-prose section" id="contact">
         <Contact2
           title="Contact Us"
           description="We are available for questions, feedback, or collaboration opportunities. Let us know how we can help!"

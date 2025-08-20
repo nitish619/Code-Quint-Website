@@ -84,7 +84,7 @@ const FAQTabs: React.FC<FAQTabsProps> = ({
   selected,
   setSelected,
 }) => (
-  <div className="relative z-10 flex flex-wrap items-center justify-center gap-4">
+  <div className="relative z-10 flex flex-wrap items-center justify-center gap-4 mt-4">
     {Object.entries(categories).map(([key, label]) => (
       <button
         key={key}
