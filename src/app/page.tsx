@@ -9,33 +9,21 @@ import { Contact2 } from "@/components/Contact/contact-2";
 import OurGoal from "@/components/Goals/OurGoal";
 import { TestimonialDemo } from "@/components/Testimonials/TestimonialDemo";
 import WhyChooseUs from "@/components/WhyChooseUs/WhyChooseUs";
+import { Pricing } from "@/components/Price/pricing-section-with-comparison";
+import { HeroSection1 } from "@/components/heroSection/hero-section-1";
+import GlowCardGrid from "@/components/keyPoints/GlowCardGrid";
 
 export default function Home() {
   return (
     <main>
       {/* Hero Section */}
       <section>
-        <HeroSection
-          title="Welcome to Our Platform"
-          subtitle={{
-            regular: "Unlock your business's full potential ",
-            gradient: "with our tailored digital marketing solutions",
-          }}
-          description="From SEO optimization to social media management, we have the tools to boost your online presence and drive growth."
-          ctaText="Get Started"
-          ctaHref="#contact"
-          gridOptions={{
-            angle: 65,
-            opacity: 0.4,
-            cellSize: 50,
-            lightLineColor: "#4a4a4a",
-            darkLineColor: "#2a2a2a",
-          }}
-        />
+        <HeroSection1 />
       </section>
 
       <section className="container-prose section">
-        <GlowingEffectDemo />
+        {/* <GlowingEffectDemo /> */}
+        <GlowCardGrid />
       </section>
 
       <section className="container-prose section">
@@ -76,6 +64,10 @@ export default function Home() {
 
       <section className="">
         <FAQDemo />
+      </section>
+
+      <section className="w-full">
+        <Pricing />
       </section>
 
       <section className="container-prose section" id="contact">

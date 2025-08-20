@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Header from "@/components/header/Header";
-import Footer from "@/components/footer/Footer";
 import "../styles/global.css";
 import { ThemeProvider } from "@/components/DarkMode/theme-provider";
 import { allFonts } from "./fonts";
+import { Footer7 } from "@/components/footer/footer-7";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -25,9 +25,9 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <Header />
+          {/* <Header /> */}
           {children}
-          <Footer />
+          <Footer7 />
         </ThemeProvider>
       </body>
     </html>
