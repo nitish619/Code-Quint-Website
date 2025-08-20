@@ -18,34 +18,6 @@
   scrollbar-width: none; /* Firefox */
 }
 
-/* Box gradient  */
-.bg-gradient-light {
-  background: linear-gradient(to bottom, #9a7ec7 10%, #ffffff 65%);
-}
-
-.dark .bg-gradient-dark {
-  background: linear-gradient(to bottom, #1e1e1e 10%, #000000 85%);
-}
-
-/* -------------------------------------------------------
-   1) PolySans font faces (adjust file paths as needed)
-   ------------------------------------------------------- */
-@font-face {
-  font-family: "PolySans";
-  src: url("/fonts/PolySans-Variable.woff2") format("woff2-variations"),
-    url("/fonts/PolySans-Variable.woff2") format("woff2");
-  font-weight: 100 900;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "PolySans";
-  src: url("/fonts/PolySans-Italic.woff2") format("woff2");
-  font-weight: 100 900;
-  font-style: italic;
-  font-display: swap;
-}
-
 /* -------------------------------------------------------
    2) Root design tokens (fluid type, spacing, colors)
    - Viewport range assumed ~360px → 1440px
@@ -53,9 +25,22 @@
 @layer base {
   :root {
     /* Fonts */
-    --font-sans: "PolySans", ui-sans-serif, system-ui, -apple-system, "Segoe UI",
-      Roboto, "Noto Sans", "Helvetica Neue", Arial, "Apple Color Emoji",
-      "Segoe UI Emoji";
+
+    /* Pick your defaults (change any time): */
+    --font-heading: var(--font-bulky); /* h1, h2, h3 */
+    --font-subheading: var(--font-neutral-wide); /* optional */
+    --font-body: var(--font-bulky); /* paragraphs */
+    --font-mono: var(--font-neutral-mono);
+
+    /* Rhythm */
+    --lh-heading: 1.15;
+    --lh-body: 1.55;
+    --track-tight: -0.01em; /* subtle tighten for big headings */
+
+    /* Paragraph sizes (S / M / L; M is default) */
+    --fs-p-sm: clamp(0.875rem, 0.83rem + 0.35vw, 1rem); /* 14 → 16 */
+    --fs-p-md: clamp(1rem, 0.96rem + 0.4vw, 1.125rem); /* 16 → 18  (DEFAULT) */
+    --fs-p-lg: clamp(1.125rem, 1.02rem + 0.75vw, 1.375rem); /* 18 → 22 (Lead) */
 
     /* Layout */
     --container-max: 1200px;
@@ -82,7 +67,11 @@
     /* H1                34 → 48px  */
     --fs-h1: clamp(2.125rem, 1.5rem + 2.5vw, 3rem);
     /* Display/hero      40 → 64px  */
-    --fs-display: clamp(2.5rem, 1.6667rem + 3.7037vw, 5rem);
+    --fs-hero-h2: clamp(
+      2.5rem,
+      1.6667rem + 3.7037vw,
+      5rem
+    ); /* 40 → 80 (your value) */
 
     /* Optional step aliases (for existing codebases) */
     --step-00: var(--fs-small);
@@ -105,27 +94,28 @@
      3) Base element defaults
      ------------------------------------------------------- */
   html {
-    font-family: var(--font-sans);
     -webkit-text-size-adjust: 100%;
     text-rendering: optimizeLegibility;
   }
+
   body {
-    color: hsl(var(--fg));
-    background-color: hsl(var(--bg));
-    font-size: var(--fs-body);
-    line-height: var(--lh-normal);
+    font-family: var(--font-body), ui-sans-serif, system-ui, sans-serif;
+    font-size: var(--fs-p-md); /* default = paragraph medium */
+    line-height: var(--lh-body);
+    color: var(--foreground);
+    background: var(--background);
   }
 
   h1,
   h2,
   h3,
   h4 {
-    line-height: var(--lh-tight);
+    font-family: var(--font-heading), ui-sans-serif, system-ui, sans-serif;
+    line-height: var(--lh-heading);
     letter-spacing: 0;
   }
-  h1 {
-    font-size: var(--fs-h1);
-  }
+
+  /* Section headings (default H2/H3 sizing) */
   h2 {
     font-size: var(--fs-h2);
   }
@@ -133,13 +123,13 @@
     font-size: var(--fs-h3);
   }
 
+  /* Paragraph defaults */
+  p {
+    max-width: var(--measure);
+  }
   p + p {
     margin-top: 1rem;
-  } /* 16px default */
-  p.lead {
-    font-size: var(--fs-lead);
-    line-height: var(--lh-relaxed);
-  }
+  } /* 16px */
 
   /* Forms & focus */
   :focus-visible {
@@ -170,5 +160,54 @@
     border-radius: 1rem;
     box-shadow: var(--elev-1);
     padding: 1.5rem; /* 24px */
+  }
+
+  /* Font role utilities (optional but handy) */
+  .font-heading {
+    font-family: var(--font-heading), ui-sans-serif, system-ui, sans-serif;
+  }
+  .font-subheading {
+    font-family: var(--font-subheading), ui-sans-serif, system-ui, sans-serif;
+  }
+  .font-body {
+    font-family: var(--font-body), ui-sans-serif, system-ui, sans-serif;
+  }
+  .font-mono {
+    font-family: var(--font-mono), ui-monospace, SFMono-Regular, Menlo,
+      monospace;
+  }
+
+  /* Paragraph size utilities */
+  .text-p-sm {
+    font-size: var(--fs-p-sm);
+    line-height: var(--lh-body);
+  }
+  .text-p-md {
+    font-size: var(--fs-p-md);
+    line-height: var(--lh-body);
+  } /* same as default */
+  .text-p-lg {
+    font-size: var(--fs-p-lg);
+    line-height: 1.6;
+  } /* comfy lead */
+
+  /* Hero H2 override — use this ONLY in the hero */
+  .heading-hero {
+    font-size: var(--fs-hero-h2);
+    line-height: 1.1;
+    letter-spacing: var(--track-tight);
+    font-family: var(--font-heading), ui-sans-serif, system-ui, sans-serif;
+  }
+
+  /* If you prefer a wrapper, apply .is-hero on the section and it will upgrade the h2 inside */
+  .is-hero h2 {
+    font-size: var(--fs-hero-h2);
+    line-height: 1.1;
+    letter-spacing: var(--track-tight);
+  }
+
+  /* Useful helpers */
+  .measure {
+    max-width: var(--measure);
   }
 }
