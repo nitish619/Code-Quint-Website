@@ -4,7 +4,7 @@ import "../styles/global.css";
 import { ThemeProvider } from "@/components/DarkMode/theme-provider";
 import { allFonts } from "./fonts";
 import { Footer7 } from "@/components/footer/footer-7";
-import { HeaderSection } from "@/components/header/Header1";
+import HeroHeader from "@/components/header/Header1";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -25,7 +25,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <HeaderSection />
+          <HeroHeader />
           {children}
           <Footer7 />
         </ThemeProvider>

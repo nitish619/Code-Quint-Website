@@ -28,63 +28,63 @@ const Logos3 = ({
   logos = [
     {
       id: "logo-1",
-      description: "Logo 1",
-      image: "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/logos/astro-wordmark.svg",
-      className: "h-7 w-auto",
+      description: "Astro",
+      image: "/tech/docker.png",
+      className: "h-20 w-auto",
     },
     {
       id: "logo-2",
-      description: "Logo 2",
-      image: "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/logos/figma-wordmark.svg",
-      className: "h-7 w-auto",
+      description: "Figma",
+      image: "/tech/figma.png",
+      className: "h-20 w-auto",
     },
     {
       id: "logo-3",
-      description: "Logo 3",
-      image: "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/logos/nextjs-wordmark.svg",
-      className: "h-7 w-auto",
+      description: "Next.js",
+      image: "/tech/nextjs.png",
+      className: "h-20 w-auto",
     },
     {
       id: "logo-4",
-      description: "Logo 4",
-      image: "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/logos/react-wordmark.svg",
-      className: "h-7 w-auto",
+      description: "React",
+      image: "/tech/reactjs.png",
+      className: "h-20 w-auto",
     },
     {
       id: "logo-5",
-      description: "Logo 5",
-      image: "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/logos/shadcn-ui-wordmark.svg",
-      className: "h-7 w-auto",
+      description: "git",
+      image: "/tech/git.png",
+      className: "h-20 w-auto",
     },
     {
       id: "logo-6",
-      description: "Logo 6",
-      image: "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/logos/supabase-wordmark.svg",
-      className: "h-7 w-auto",
+      description: "typescript",
+      image: "/tech/typescript.png",
+      className: "h-20 w-auto",
     },
     {
       id: "logo-7",
-      description: "Logo 7",
-      image: "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/logos/tailwind-wordmark.svg",
-      className: "h-4 w-auto",
+      description: "Tailwind CSS",
+      image: "/tech/tailwind.png",
+      className: "h-20 w-auto",
     },
     {
       id: "logo-8",
-      description: "Logo 8",
-      image: "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/logos/vercel-wordmark.svg",
-      className: "h-7 w-auto",
+      description: "JavaScript",
+      image: "/tech/javascript.png",
+      className: "h-20 w-auto",
     },
   ],
 }: Logos3Props) => {
   return (
-    <section className="py-10">
+    <section className="py-0">
       <div className="container flex flex-col items-center text-center">
         <h1 className={`${styles.sectionHeadText} text-left md:text-center`}>
           {heading}
         </h1>
       </div>
-      <div className="pt-10 md:pt-16 lg:pt-20 overflow-hidden">
-        <div className="relative mx-auto flex items-center justify-center max-w-full lg:max-w-5xl">
+      <div className="pt-10 overflow-hidden">
+        <div className="relative mx-auto flex items-center justify-center max-w-full">
           <Carousel
             opts={{ loop: true }}
             plugins={[AutoScroll({ playOnInit: true })]}
@@ -99,8 +99,8 @@ const Logos3 = ({
                     <div>
                       <Image
                         src={logo.image}
-                        width={100}
-                        height={100}
+                        width={150}
+                        height={150}
                         alt={logo.description}
                         className={logo.className}
                       />

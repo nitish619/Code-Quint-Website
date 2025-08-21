@@ -101,7 +101,7 @@ export function HeroSection1({
           </p>
 
           {/* Actions */}
-          <div className="relative z-10 flex animate-appear justify-center gap-4 opacity-0 delay-300">
+          <div className="relative z-10 flex animate-appear justify-center gap-4 opacity-0 delay-300 mb-4 md:pb-0">
             <div className="relative z-10 flex animate-appear justify-center gap-4 opacity-0 delay-300">
               {actions.map((action, index) => (
                 <Button

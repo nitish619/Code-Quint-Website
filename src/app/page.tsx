@@ -48,7 +48,7 @@ export default function Home() {
         <GlowCardGrid />
       </section>
 
-      <section className="container-prose section">
+      <section className="container-prose section" id="approach">
         <OurApporach />
       </section>
 
@@ -72,7 +72,7 @@ export default function Home() {
         <TestimonialDemo />
       </section>
 
-      <section className="container-prose section">
+      <section className="section">
         <Trust />
       </section>
 
@@ -88,7 +88,7 @@ export default function Home() {
         <FAQDemo />
       </section>
 
-      <section className="w-full">
+      <section className="w-full" id="price">
         <Pricing />
       </section>
 
