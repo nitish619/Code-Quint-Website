@@ -2,26 +2,30 @@ import React from "react";
 
 const timelineData = [
   {
-    title: "Project study",
+    title: "Planning",
     description:
-      "We analyze your objectives, the target to which we address, and we study your competition. Based on the study, we present you a winning web project and digital marketing strategy.",
+      "We begin by understanding your business goals, target audience, and project requirements. This phase involves thorough research, feasibility analysis, and roadmap creation to ensure strategic alignment.",
   },
   {
-    title: "Web design",
+    title: "UI/UX Design",
     description:
-      "Our web designers will want to know your preferences and industry references. They will propose you a custom web design of the main pages of your future website, which we will discuss, amend, and approve.",
+      "Our design team crafts intuitive and engaging user interfaces and experiences. Wireframes and prototypes are created to visualize the design and gather feedback before development.",
   },
   {
-    title: "Web programming",
+    title: "Implementation & Development",
     description:
-      "Our web programmers create the web code so that it responds to the proposed design, and incorporates all the necessary functionalities. We perform quality and security tests of the page.",
+      "Our developers bring the designs to life using clean and scalable code. The development process follows agile practices with regular updates and iterations to ensure quality and functionality.",
   },
   {
-    title: "SEO",
+    title: "Testing & Quality Assurance",
     description:
-      "From a keyword research and a strategy that we will have agreed upon, we prepare the basics of the website to be crawled by search engines.",
+      "Comprehensive testing is performed to ensure the product is robust and bug-free. This includes functionality testing, performance optimization, security checks, and user acceptance testing.",
   },
-  // Add more items if needed
+  {
+    title: "Launch & Live Support",
+    description:
+      "After successful testing, we deploy the project to the live environment. We provide ongoing support and monitoring to promptly address any issues and make continuous improvements.",
+  },
 ];
 
 const OurApproach = () => (

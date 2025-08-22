@@ -49,6 +49,15 @@ export default function Home() {
         <GlowCardGrid />
       </section>
 
+      <section className="container-prose section" id="about">
+        About CodeQuint
+      </section>
+
+      <section className="" id="services">
+        <Experience />
+        <Services />
+      </section>
+
       <section className="container-prose section" id="approach">
         <OurApporach />
       </section>
@@ -61,11 +70,6 @@ export default function Home() {
         />
       </section>
 
-      <section className="" id="services">
-        <Experience />
-        <Services />
-      </section>
-
       <section className="container-prose section">
         <WhyChooseUs />
       </section>
@@ -76,10 +80,6 @@ export default function Home() {
 
       <section className="section">
         <Trust />
-      </section>
-
-      <section className="container-prose section" id="about">
-        About CodeQuint
       </section>
 
       <section>

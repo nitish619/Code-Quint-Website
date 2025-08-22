@@ -44,13 +44,16 @@ const Services = () => (
     {/* Services Icons Row */}
     <div className="flex flex-wrap justify-center gap-y-10 gap-x-8 md:gap-x-16">
       {customServices.map((service) => (
-        <div key={service.title} className="flex flex-col items-center w-32">
-          {/* Service Icon */}
+        <div
+          key={service.title}
+          className="flex flex-col items-center w-32 transition-transform duration-300 hover:scale-105 cursor-pointer"
+        >
+          {/* Shadow Behind Image */}
           <div className="mb-4">
             <Image
               src={service.img}
               alt={service.title}
-              className="w-24 h-24 rounded-full object-cover bg-primary shadow-md"
+              className="w-24 h-24 rounded-full object-cover hover:shadow-2xl dark:hover:shadow-primary/5"
               width={100}
               height={100}
             />
