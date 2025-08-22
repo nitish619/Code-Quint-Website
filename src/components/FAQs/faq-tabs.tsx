@@ -40,8 +40,6 @@ interface FAQItemProps {
 
 // Main reusable FAQ component
 export const FAQ: React.FC<FAQProps> = ({
-  title = "FAQs",
-  subtitle = "Frequently Asked Questions",
   categories,
   faqData,
   className,
@@ -58,7 +56,7 @@ export const FAQ: React.FC<FAQProps> = ({
       )}
       {...props}
     >
-      <FAQHeader title={title} subtitle={subtitle} />
+      <FAQHeader />
       <FAQTabs
         categories={categories}
         selected={selectedCategory}
@@ -69,12 +67,14 @@ export const FAQ: React.FC<FAQProps> = ({
   );
 };
 
-const FAQHeader: React.FC<FAQHeaderProps> = ({ title, subtitle }) => (
+const FAQHeader: React.FC<FAQHeaderProps> = () => (
   <div className="relative z-10 flex flex-col items-center justify-center">
     <span className="mb-8 bg-gradient-to-r from-primary to-primary/60 bg-clip-text font-medium text-transparent">
-      {subtitle}
+      Let&apos;s answer some questions
     </span>
-    <h2 className="head-h2">{title}</h2>
+    <h2 className="head-h2">
+      Frequently Asked <span className="text-purple-600">Questions</span>
+    </h2>
     <span className="absolute -top-[350px] left-[50%] z-0 h-[500px] w-[600px] -translate-x-[50%] rounded-full bg-gradient-to-r from-primary/10 to-primary/5 blur-3xl" />
   </div>
 );

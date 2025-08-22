@@ -1,7 +1,6 @@
 "use client";
 
 import AutoScroll from "embla-carousel-auto-scroll";
-import { styles } from "@/utils/style";
 
 import {
   Carousel,
@@ -9,6 +8,7 @@ import {
   CarouselItem,
 } from "@/components/ui/carousel";
 import Image from "next/image";
+import { Badge } from "../ui/badge";
 
 interface Logo {
   id: string;
@@ -24,7 +24,6 @@ interface Logos3Props {
 }
 
 const Logos3 = ({
-  heading = "Trusted by these companies",
   logos = [
     {
       id: "logo-1",
@@ -78,11 +77,18 @@ const Logos3 = ({
 }: Logos3Props) => {
   return (
     <section className="py-0">
-      <div className="container flex flex-col items-center text-center">
-        <h1 className={`${styles.sectionHeadText} text-left md:text-center`}>
-          {heading}
-        </h1>
+      <div className="flex text-center justify-center items-center gap-4 flex-col mb-4">
+        <Badge>Technology</Badge>
+        <div className="flex gap-2 flex-col justify-center items-center">
+          <h2 className="text-center head-h2">
+            Tech <span className="text-purple-600">Powering Us</span>
+          </h2>
+          <p className="text-lg leading-relaxed tracking-tight text-muted-foreground max-w-xl text-center">
+            Using modern, reliable tools to build secure and scalable solutions.
+          </p>
+        </div>
       </div>
+
       <div className="pt-10 overflow-hidden">
         <div className="relative mx-auto flex items-center justify-center max-w-full">
           <Carousel

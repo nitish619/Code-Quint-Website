@@ -1,5 +1,6 @@
 import React from "react";
 import { FaShieldAlt, FaUsers, FaBullseye, FaClock } from "react-icons/fa";
+import { Badge } from "../ui/badge";
 
 const data = [
   {
@@ -27,11 +28,16 @@ const data = [
 function WhyChooseUs() {
   return (
     <div>
-      <div className="mb-6">
-        <h2 className="head-h2">
-          Why Choose <span className="text-purple-600">Our Team</span>
-        </h2>
-        <p className="text-left md:text-center">Advantages</p>
+      <div className="flex text-center justify-center items-center gap-4 flex-col mb-4">
+        <Badge>Why Us?</Badge>
+        <div className="flex gap-2 flex-col justify-center items-center">
+          <h2 className="text-center head-h2">
+            Why Choose <span className="text-purple-600">Our Team</span>
+          </h2>
+          <p className="text-lg leading-relaxed tracking-tight text-muted-foreground max-w-xl text-center">
+            Discover the unique strengths that set our team apart.
+          </p>
+        </div>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         {data.map((item, i) => (

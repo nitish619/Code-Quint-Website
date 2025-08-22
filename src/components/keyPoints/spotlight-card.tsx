@@ -22,7 +22,7 @@ const glowColorMap = {
 
 const sizeMap = {
   sm: "w-48 h-64 sm:w-60 sm:h-80 md:w-72 md:h-96",
-  md: "w-full h-64 md:w-54 md:h-96 lg:w-80 lg:h-[25rem]",
+  md: "w-full h-[22rem] md:w-54 md:h-[30rem] lg:w-80 lg:h-[23rem]",
   lg: "w-80 h-96 sm:w-96 sm:h-[40rem] md:w-[30rem] md:h-[45rem]",
 };
 
@@ -174,14 +174,15 @@ const GlowCard: React.FC<GlowCardProps> = ({
         style={getInlineStyles()}
         className={`
           ${getSizeClasses()}
-          ${!customSize ? "aspect-[3/4]" : ""}
           rounded-2xl 
           relative 
-          grid 
-          grid-rows-[1fr_auto] 
           shadow-[0_1rem_2rem_-1rem_black] 
-          p-4 
-          gap-4 
+          p-6
+          flex
+          flex-col
+          items-center
+          text-center
+          gap-4
           backdrop-blur-[5px]
           ${className}
         `}

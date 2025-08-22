@@ -9,7 +9,8 @@ function OurGoal() {
           <div className="space-y-6 text-primary">
             <p className="text-xl">Clear Goals, Uncertain Paths.</p>
             <h2 className="head-h2">
-              Captivate. Impress. Convert.
+              Captivate. <span className="text-purple-600">Impress.</span>{" "}
+              Convert.
             </h2>
             <p className="text-xl">
               Navigating the digital landscape can be uncertain. Let me guide

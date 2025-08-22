@@ -4,13 +4,13 @@ import { Button } from "@/components/ui/button";
 
 function Pricing() {
   return (
-    <div className="w-full py-20 lg:py-40">
+    <div className="w-full py-20">
       <div className="container mx-auto">
         <div className="flex text-center justify-center items-center gap-4 flex-col">
           <Badge>Pricing</Badge>
-          <div className="flex gap-2 flex-col">
-            <h2 className="text-3xl md:text-5xl tracking-tighter max-w-xl text-center font-regular">
-              Prices that make sense!
+          <div className="flex gap-2 flex-col justify-center items-center">
+            <h2 className="text-center head-h2">
+              <span className="text-purple-600">Prices</span> that make sense!
             </h2>
             <p className="text-lg leading-relaxed tracking-tight text-muted-foreground max-w-xl text-center">
               Managing a small business today is already tough.
@@ -66,7 +66,9 @@ function Pricing() {
             <div></div>
             <div></div>
             <div></div>
-            <div className="px-3 lg:px-6 col-span-3 lg:col-span-1 py-4">SSO</div>
+            <div className="px-3 lg:px-6 col-span-3 lg:col-span-1 py-4">
+              SSO
+            </div>
             <div className="px-3 py-1 md:px-6 md:py-4 flex justify-center">
               <Check className="w-4 h-4 text-primary" />
             </div>

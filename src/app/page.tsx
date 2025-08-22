@@ -1,5 +1,4 @@
 import OurApporach from "@/components/Apporach/OurApporach";
-import { BorderGradientButton } from "@/components/button/BorderGradientButton";
 import { Experience } from "@/components/ExpericenceWork/Experience";
 import FAQDemo from "@/components/FAQs/faq";
 import { Trust } from "@/components/TrustedBy/Trust";
@@ -57,14 +56,6 @@ export default function Home() {
 
       <section className="container-prose section" id="approach">
         <OurApporach />
-      </section>
-
-      <section className="container-prose section">
-        <div>Our Methodology Unveiled</div>
-        <BorderGradientButton
-          ctaText="Book Your Free Consultation"
-          ctaHref="#"
-        />
       </section>
 
       <section className="container-prose section">

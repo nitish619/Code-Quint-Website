@@ -126,8 +126,6 @@ const FAQDemo = () => {
   return (
     <div className="min-h-screen">
       <FAQ
-        title="Frequently Asked Questions"
-        subtitle="Let's answer some questions"
         categories={categories}
         faqData={faqData}
       />

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import React from "react";
+import { Badge } from "../ui/badge";
 
 const customServices = [
   {
@@ -32,15 +33,22 @@ const customServices = [
 const Services = () => (
   <div className="px-4 py-12">
     {/* Header */}
-    <h2 className="text-4xl md:text-5xl font-bold text-primary text-center mb-4">
-      OUR SERVICES
-    </h2>
-    <p className="max-w-2xl mx-auto text-center text-primary mb-12 text-base md:text-lg">
-      Mercury seamlessly integrates into your business workflow whether you are
-      looking to create a new application, or need help with development and/or
-      QA of your existing solution. We provide teams capable of increasing the
-      velocity of your development and extending your technical capabilities.
-    </p>
+    <div className="flex text-center justify-center items-center gap-4 flex-col">
+      <Badge>SERVICES</Badge>
+      <div className="flex gap-2 flex-col justify-center items-center">
+        <h2 className="text-center head-h2">
+          OUR <span className="text-purple-600">SERVICES</span>
+        </h2>
+        <p className="max-w-2xl mx-auto text-center text-primary mb-12 text-base md:text-lg">
+          Mercury seamlessly integrates into your business workflow whether you
+          are looking to create a new application, or need help with development
+          and/or QA of your existing solution. We provide teams capable of
+          increasing the velocity of your development and extending your
+          technical capabilities.
+        </p>
+      </div>
+    </div>
+
     {/* Services Icons Row */}
     <div className="flex flex-wrap justify-center gap-y-10 gap-x-8 md:gap-x-16">
       {customServices.map((service) => (

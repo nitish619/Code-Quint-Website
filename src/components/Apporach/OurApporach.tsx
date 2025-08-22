@@ -1,4 +1,5 @@
 import React from "react";
+import { Badge } from "../ui/badge";
 
 const timelineData = [
   {
@@ -30,11 +31,16 @@ const timelineData = [
 
 const OurApproach = () => (
   <div>
-    <div className="m-4">
-      {/* <p className={`${styles.sectionSubText} text-left md:text-center`}>
-            What I have done so far
-          </p> */}
-      <h2 className="head-h2 text-center">Our Apporach</h2>
+    <div className="flex text-center justify-center items-center gap-4 flex-col mb-4">
+      <Badge>Apporach</Badge>
+      <div className="flex gap-2 flex-col justify-center items-center">
+        <h2 className="text-center head-h2">
+          Our <span className="text-purple-600">Apporach</span>
+        </h2>
+        <p className="text-lg leading-relaxed tracking-tight text-muted-foreground max-w-xl text-center">
+          A simple and effective way to solve your toughest challenges.
+        </p>
+      </div>
     </div>
     {/* Standing (vertical) line: center on md+, left on mobile */}
     <div className="relative w-full max-w-6xl mx-auto py-20">

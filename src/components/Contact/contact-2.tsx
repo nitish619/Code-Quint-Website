@@ -39,7 +39,7 @@ export const Contact2 = ({
   };
 
   return (
-    <section className="py-20">
+    <div className="">
       <div className="mx-auto flex max-w-screen-xl flex-col justify-between gap-5 lg:flex-row">
         <div className="flex max-w-full lg:max-w-lg flex-col justify-between gap-10">
           <div className="text-center lg:text-left">
@@ -154,6 +154,6 @@ export const Contact2 = ({
           </Button>
         </form>
       </div>
-    </section>
+    </div>
   );
 };
