@@ -2,7 +2,6 @@
 
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { ArrowRightIcon } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useTheme } from "next-themes";
 
@@ -16,10 +15,6 @@ interface HeroAction {
 interface HeroProps {
   badge?: {
     text: string;
-    action: {
-      text: string;
-      href: string;
-    };
   };
   title: string;
   description: string;
@@ -83,10 +78,6 @@ export function HeroSection1({
           {badge && (
             <Badge variant="outline" className="animate-appear gap-2">
               <span className="text-muted-foreground">{badge.text}</span>
-              <a href={badge.action.href} className="flex items-center gap-1">
-                {badge.action.text}
-                <ArrowRightIcon className="h-3 w-3" />
-              </a>
             </Badge>
           )}
 

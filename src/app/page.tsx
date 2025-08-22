@@ -12,6 +12,7 @@ import GlowCardGrid from "@/components/keyPoints/GlowCardGrid";
 import { HeroSection1 } from "@/components/heroSection/hero-section";
 import { Icons } from "@/components/ui/icons";
 import Services from "@/components/Our services/Services";
+import AboutUs from "@/components/About/AboutUs";
 
 export default function Home() {
   return (
@@ -21,10 +22,6 @@ export default function Home() {
         <HeroSection1
           badge={{
             text: "Premium Web Design Agency",
-            action: {
-              text: "Learn more",
-              href: "/docs",
-            },
           }}
           title="We Grow Brands Online"
           description="Custom Websites, Branding & SEO Optimisation to Content Development"
@@ -50,7 +47,7 @@ export default function Home() {
       </section>
 
       <section className="container-prose section" id="about">
-        About CodeQuint
+        <AboutUs />
       </section>
 
       <section className="" id="services">

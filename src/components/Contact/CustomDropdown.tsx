@@ -48,7 +48,7 @@ const CustomDropdown: React.FC<CustomDropdownProps> = ({
     >
       <label
         htmlFor={id}
-        className="block text-sm font-medium text-gray-700 dark:text-gray-300"
+        className="block text-sm font-medium text-primary dark:text-gray-300"
       >
         {label}
       </label>
@@ -57,7 +57,7 @@ const CustomDropdown: React.FC<CustomDropdownProps> = ({
         onClick={() => setIsOpen(!isOpen)}
         aria-haspopup="listbox"
         aria-expanded={isOpen}
-        className="w-full rounded-md text-sm border border-gray-300 text-gray-900 dark:text-gray-100 p-2 text-left focus:outline-none focus:ring-2 focus:ring-indigo-500"
+        className="w-full rounded-md text-sm border border-gray-300 text-gray-900 dark:text-gray-500 p-2 text-left focus:outline-none focus:ring-2 focus:ring-indigo-500"
         id={id}
       >
         {selectedLabel}
