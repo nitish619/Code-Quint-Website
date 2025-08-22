@@ -68,7 +68,10 @@ export const Contact2 = ({
             </ul>
           </div>
         </div>
-        <form onSubmit={handleSubmit} className="flex w-full flex-col gap-6 rounded-lg border p-10">
+        <form
+          onSubmit={handleSubmit}
+          className="flex w-full flex-col gap-6 rounded-lg border p-10"
+        >
           <div className="flex flex-col md:flex-row gap-4">
             <div className="grid w-full items-center gap-1.5">
               <Label htmlFor="firstname">First Name</Label>
@@ -127,8 +130,11 @@ export const Contact2 = ({
               id="services"
               options={[
                 { value: "web-dev", label: "Web Development" },
+                { value: "web-man", label: "Web Mantainance" },
                 { value: "mobile-dev", label: "Mobile Development" },
+                { value: "seo", label: "SEO OPtimization" },
                 { value: "uiux", label: "UI/UX Design" },
+                { value: "other", label: "Other" },
               ]}
               value={service}
               onChange={setService}

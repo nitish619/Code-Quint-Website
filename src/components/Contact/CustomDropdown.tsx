@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
+import { Label } from "@/components/ui/label";
 
 interface Option {
   value: string;
@@ -46,18 +47,13 @@ const CustomDropdown: React.FC<CustomDropdownProps> = ({
       className="grid w-full items-center gap-1.5 relative"
       ref={dropdownRef}
     >
-      <label
-        htmlFor={id}
-        className="block text-sm font-medium text-primary dark:text-gray-300"
-      >
-        {label}
-      </label>
+      <Label htmlFor="subject">{label}</Label>
       <button
         type="button"
         onClick={() => setIsOpen(!isOpen)}
         aria-haspopup="listbox"
         aria-expanded={isOpen}
-        className="w-full rounded-md text-sm border border-gray-300 text-gray-900 dark:text-gray-500 p-2 text-left focus:outline-none focus:ring-2 focus:ring-indigo-500"
+        className="w-full rounded-md text-sm border border-gray-300 text-muted-foreground p-2 text-left focus:outline-none focus:ring-2 focus:ring-indigo-500"
         id={id}
       >
         {selectedLabel}
