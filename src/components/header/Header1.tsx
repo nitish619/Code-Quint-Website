@@ -9,10 +9,10 @@ import { ModeToggle } from "../DarkMode/ModeButton";
 import { useTheme } from "next-themes";
 
 const menuItems = [
-  { name: "Features", href: "#approach" },
-  { name: "Solution", href: "#services" },
-  { name: "Pricing", href: "#price" },
   { name: "About", href: "#about" },
+  { name: "Apporach", href: "#approach" },
+  { name: "Services", href: "#services" },
+  { name: "Pricing", href: "#price" },
 ];
 
 const HeroHeader = () => {

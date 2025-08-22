@@ -4,22 +4,22 @@ import { FaShieldAlt, FaUsers, FaBullseye, FaClock } from "react-icons/fa";
 const data = [
   {
     icon: <FaShieldAlt size={40} className="text-primary" />,
-    title: "Warranty",
+    title: "Business approach to development",
     para: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa natus dignissimos dicta sed unde?",
   },
   {
     icon: <FaUsers size={40} className="text-primary" />,
-    title: "People",
+    title: "Advanced 16 years Expertise",
     para: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa natus dignissimos dicta sed unde?",
   },
   {
     icon: <FaBullseye size={40} className="text-primary" />,
-    title: "Aim",
+    title: "Lifetime Code Warranty",
     para: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa natus dignissimos dicta sed unde?",
   },
   {
     icon: <FaClock size={40} className="text-primary" />,
-    title: "Clock",
+    title: "Enhanced business value of products",
     para: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa natus dignissimos dicta sed unde?",
   },
 ];
@@ -31,10 +31,7 @@ function WhyChooseUs() {
         <h2 className="head-h2">
           Why Choose <span className="text-purple-600">Our Team</span>
         </h2>
-        <p className="text-left md:text-center">
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto
-          aliquam impedit non vel vero dolorem.
-        </p>
+        <p className="text-left md:text-center">Advantages</p>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         {data.map((item, i) => (

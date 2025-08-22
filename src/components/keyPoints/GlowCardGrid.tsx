@@ -4,19 +4,19 @@ import { GlowCard } from "./spotlight-card";
 // Sample data for up to 3 boxes with heading and paragraph
 const cardsData = [
   {
-    heading: "Tailored solutions for your business",
+    heading: "Maximum Leads Conversions",
     paragraph:
-      "Our services are customized to fit the specific needs and goals of your business.",
+      "From smart CTAs to optimised landing pages. Every element is crafted to turn your visitors into qualified leads.",
   },
   {
-    heading: "Maximize online visibility",
+    heading: "Performance & User Experience",
     paragraph:
-      "Our SEO strategies will help your website rank higher in search engines, driving more traffic and leads to your business.",
+      "A slow or confusing website costs you business. Our websites are fast-loading, mobile-friendly, and ensure visitors stay longer and engage more with your brand.",
   },
   {
-    heading: "Customized marketing strategies",
+    heading: "Growth & ROI-Driven Strategy",
     paragraph:
-      "Our team will create a personalized plan to help your business thrive in the digital world.",
+      "We integrate analytics, automation, and scalable solutions that deliver measurable results and maximise your return on investment.",
   },
 ];
 

@@ -11,6 +11,7 @@ import { Pricing } from "@/components/Price/pricing-section-with-comparison";
 import GlowCardGrid from "@/components/keyPoints/GlowCardGrid";
 import { HeroSection1 } from "@/components/heroSection/hero-section";
 import { Icons } from "@/components/ui/icons";
+import Services from "@/components/Our services/Services";
 
 export default function Home() {
   return (
@@ -19,14 +20,14 @@ export default function Home() {
       <section>
         <HeroSection1
           badge={{
-            text: "Introducing our new components",
+            text: "Premium Web Design Agency",
             action: {
               text: "Learn more",
               href: "/docs",
             },
           }}
-          title="Build faster with beautiful components"
-          description="Premium UI components built with React and Tailwind CSS. Save time and ship your next project faster with our ready-to-use components."
+          title="We Grow Brands Online"
+          description="Custom Websites, Branding & SEO Optimisation to Content Development"
           actions={[
             {
               text: "Get Started",
@@ -62,6 +63,7 @@ export default function Home() {
 
       <section className="" id="services">
         <Experience />
+        <Services />
       </section>
 
       <section className="container-prose section">

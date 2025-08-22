@@ -1,93 +1,115 @@
 import React from "react";
-import { styles } from "@/utils/style";
 
-const approachData = [
+const timelineData = [
   {
-    title: "Web Developer",
-    description: [
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum molestias fugit eligendi voluptas? Similique, cum?",
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum molestias fugit eligendi voluptas? Similique, cum?",
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum molestias fugit eligendi voluptas? Similique, cum?",
-    ],
+    title: "Project study",
+    description:
+      "We analyze your objectives, the target to which we address, and we study your competition. Based on the study, we present you a winning web project and digital marketing strategy.",
   },
   {
-    title: "UI/UX Designer",
-    description: [
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum molestias fugit eligendi voluptas? Similique, cum?",
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum molestias fugit eligendi voluptas? Similique, cum?",
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum molestias fugit eligendi voluptas? Similique, cum?",
-    ],
+    title: "Web design",
+    description:
+      "Our web designers will want to know your preferences and industry references. They will propose you a custom web design of the main pages of your future website, which we will discuss, amend, and approve.",
+  },
+  {
+    title: "Web programming",
+    description:
+      "Our web programmers create the web code so that it responds to the proposed design, and incorporates all the necessary functionalities. We perform quality and security tests of the page.",
   },
   {
     title: "SEO",
-    description: [
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum molestias fugit eligendi voluptas? Similique, cum?",
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum molestias fugit eligendi voluptas? Similique, cum?",
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum molestias fugit eligendi voluptas? Similique, cum?",
-    ],
+    description:
+      "From a keyword research and a strategy that we will have agreed upon, we prepare the basics of the website to be crawled by search engines.",
   },
-  // ...more if needed
+  // Add more items if needed
 ];
 
-const OurApproach = () => {
-  return (
-    <section id="experience" className="mx-auto">
-      <div className="">
-        <div className="m-4">
-          {/* <p className={`${styles.sectionSubText} text-left md:text-center`}>
+const OurApproach = () => (
+  <div>
+    <div className="m-4">
+      {/* <p className={`${styles.sectionSubText} text-left md:text-center`}>
             What I have done so far
           </p> */}
-          <h2 className="head-h2 text-center">Our Apporach</h2>
-        </div>
-
-        <div className="relative max-w-6xl mx-auto">
-          {/* Vertical Line */}
-          <div className="absolute w-1 h-full bg-primary md:left-1/2 left-7 transform md:-translate-x-1/2"></div>
-
-          <div className="space-y-12">
-            {approachData.map((exp, index) => (
+      <h2 className="head-h2 text-center">Our Apporach</h2>
+    </div>
+    {/* Standing (vertical) line: center on md+, left on mobile */}
+    <div className="relative w-full max-w-6xl mx-auto py-20">
+      <div className="absolute top-0 left-6 md:left-1/2 w-1 h-full bg-gray-300 -translate-x-1/2 md:translate-x-0 z-0" />
+      <div className="flex flex-col gap-10 relative z-10">
+        {timelineData.map((item, i) => {
+          const isLeft = i % 2 === 0;
+          return (
+            <div key={i} className="flex w-full relative md:min-h-[120px]">
+              {/* Desktop left half */}
               <div
-                key={index}
-                className={`relative flex items-center flex-col ml-6 pl-6 md:ml-0 md:items-start ${
-                  index % 2 === 0 ? "md:flex-row-reverse" : "md:flex-row"
+                className={`flex-1 hidden md:flex ${
+                  isLeft ? "justify-end" : "justify-start"
                 }`}
               >
-                <div className="absolute md:left-1/2 -left-7 flex items-center justify-center w-16 h-16 rounded-full bg-gray-700 border-4 border-white shadow-lg z-10 transform md:-translate-x-1/2">
-                  <div className="rounded-full text-2xl md:text-3xl font-bold text-white flex items-center justify-center w-full h-full">
-                    {index + 1}
+                {isLeft && (
+                  <div className="flex">
+                    {/* Heading */}
+                    <div className="text-right max-w-sm">
+                      <h3 className="text-2xl font-semibold">{item.title}</h3>
+                      <p className="mt-4 text-gray-600">{item.description}</p>
+                    </div>
+                    {/* Horizontal (sleeping) line */}
+                    <div className="w-12 h-0.5 bg-gray-300 mx-4 mt-4" />
+                    {/* Number */}
+                    <span className="text-2xl font-bold text-primary px-2">
+                      {String(i + 1).padStart(2, "0")}
+                    </span>
                   </div>
-                </div>
-                <div
-                  className="w-[90%] md:w-5/12 lg:w-5/12 p-6 mt-6 md:mt-0 ml-5 md:ml-0 md:mr-6 rounded-lg shadow-lg border-b-4 text-white"
-                  style={{
-                    background:
-                      "linear-gradient(to bottom, #31283d 10%, #000000 65%)",
-                  }}
-                >
-                  <h3 className="text-lg md:text-xl font-semibold">
-                    {exp.title}
-                  </h3>
-                  <ul className="mt-1 md:mt-5 list-disc ml-5 space-y-2">
-                    {(Array.isArray(exp.description)
-                      ? exp.description
-                      : [exp.description]
-                    ).map((points, index) => (
-                      <li
-                        key={index}
-                        className="text-white-100 text-[12px] md:text-[14px] pl-1 tracking-wider"
-                      >
-                        {points}
-                      </li>
-                    ))}
-                  </ul>
+                )}
+              </div>
+              {/* Center: timeline and dot */}
+              <div className="flex flex-col z-10 ml-4 md:ml-0 lg:ml-1 mt-2">
+                <span className="block w-4 h-4 bg-gray-700 rounded-full border-4 border-white z-20"></span>
+              </div>
+              {/* Desktop right half */}
+              <div
+                className={`flex-1 hidden md:flex ${
+                  isLeft ? "justify-start" : "justify-end"
+                }`}
+              >
+                {!isLeft && (
+                  <div className="flex">
+                    {/* Number */}
+                    <span className="text-2xl font-bold text-primary px-2">
+                      {String(i + 1).padStart(2, "0")}
+                    </span>
+                    {/* Horizontal (sleeping) line */}
+                    <div className="w-12 h-0.5 bg-gray-300 mx-4 mt-4" />
+                    {/* Heading */}
+                    <div className="text-left max-w-sm">
+                      <h3 className="text-2xl font-semibold">{item.title}</h3>
+                      <p className="mt-4 text-gray-600">{item.description}</p>
+                    </div>
+                  </div>
+                )}
+              </div>
+              {/* Mobile View: always right of vertical line */}
+              <div className="md:hidden flex-1 flex pl-4">
+                {/* Number */}
+                <span className="text-xl font-bold text-primary">
+                  {String(i + 1).padStart(2, "0")}
+                </span>
+                {/* Horizontal (sleeping) line */}
+                <div className="w-20 h-0.5 bg-gray-300 mx-2 mt-3" />
+                {/* Heading and description */}
+                <div>
+                  <h3 className="text-lg font-semibold">{item.title}</h3>
+                  <p className="mt-2 text-gray-600 text-base">
+                    {item.description}
+                  </p>
                 </div>
               </div>
-            ))}
-          </div>
-        </div>
+            </div>
+          );
+        })}
       </div>
-    </section>
-  );
-};
+    </div>
+  </div>
+);
 
 export default OurApproach;
